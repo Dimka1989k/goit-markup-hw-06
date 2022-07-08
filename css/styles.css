@@ -1106,6 +1106,7 @@ section {
     color: #FFFFFF;
     display: block;
     text-transform: uppercase;
+   
         
     
 }
@@ -1169,7 +1170,7 @@ section {
     width: 24px;
     height: 24px;
     margin-left: 10px;
-    background-color:#2196F3 ;    
+    background-color:#2196F3;    
     
     
     
@@ -1179,6 +1180,11 @@ section {
 .button-send:hover {
     color: #ffffff;
 
+}
+
+
+.footer-sending {
+    margin-left: 106px;
 }
 
 
