@@ -62,13 +62,7 @@ textarea {
     resize: none;
 }
 
-textarea {
-    resize: vertical;
-}
 
-textarea {
-    resize: horizontal;
-}
 
 
 
@@ -302,7 +296,7 @@ textarea {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -315,12 +309,13 @@ textarea {
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .modal {
+    display: flex;
     position: absolute;
-    top: 221px;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, 0);
     margin-left: auto;
@@ -348,16 +343,21 @@ textarea {
 }
 
 .form-modal {
-    position: absolute;
     display: flex;
+    flex-direction: column;
+    align-items: center;    
     width: 448px;
     height: 501px;
     flex-direction: column;
     margin: 40px 40px;
     
+     
     
-    
-    
+}
+
+.group-form {
+    width: 100%;
+
 }
 
 
@@ -377,13 +377,11 @@ textarea {
 }
 
 
-textarea {
-    resize: none;
-    
-}
+
 
 
 .form-lable {
+    display: block;
     width: 25px;
     height: 14px;
     font-family: 'Roboto', sans-serif;
@@ -416,12 +414,13 @@ textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 12px 16px;
+    margin-bottom: 20px;
     
 }
 
 
 
-.button-modal {
+.button-modal {  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -444,6 +443,8 @@ textarea {
     transition-property: color background-color box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    text-transform: none;
     
     
 }
@@ -473,9 +474,26 @@ textarea {
     
 }
 
+.label-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;      
+    letter-spacing: 0.03em;    
+    color: #757575;
+
+
+}
+
+
 
 
 .treaty {
+    display: inline;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -487,9 +505,6 @@ textarea {
 }
 
 
-.form-input-icon {
-    
-}
 
 
 .input-icon {
