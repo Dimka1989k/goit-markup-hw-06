@@ -87,23 +87,29 @@
               <div>
                 <form class="form-modal" name="transfer" autocomplete="on">
                   <strong class="form-title">Оставьте свои данные, мы вам перезвоним</strong>
-                  <div class="group-form" >
+                  <div class="group-form">
                     <label class="form-lable" for="username">Имя</label>                  
-                    <input class="form-input" type="text" name="username" id="username" placeholder="" />
+                    <input class="form-input" type="text" name="username" id="username"/>
+                  </div> 
+                  <div class="group-form">
                     <label class="form-lable" for="phone-number">Телефон</label>
-                    <input class="form-input" type="tel" name="phone-number" id="phone-number"/>               
-                    <label class="form-lable" for="mail">Почта </label>
+                    <input class="form-input" type="tel" name="phone-number" id="phone-number" />  
+                  </div> 
+                  <div class="group-form">
+                    <label class="form-lable" for="mail">Почта</label>
                     <input class="form-input" type="email" name="mail" id="mail"/>
+                  </div>             
+                  <div class="group-form">
                     <label class="form-lable" for="notes" >Комментарий</label>
-                    <textarea class="form-textarea" name="notes" id="notes" placeholder="Введите текст" rows="3"></textarea>
+                    <textarea class="form-textarea" name="notes" id="notes" placeholder="Введите текст"></textarea>
                   </div>
-                                  
-                  <label class="label-checkbox" for="conditions">
-                    <input class="checkbox visually-hidden" type="checkbox" name="conditions" id="conditions" checked/>
-                     Соглашаюсь с рассылкой и принимаю <a class="treaty" href="">Условия договора</a>   
-                  </label>
-                    <button class="button-modal" type="submit">Отправить</button>                             
-                  
+                  <div class="group-form">
+                    <label class="label-checkbox" for="conditions">
+                      <input class="checkbox visually-hidden" type="checkbox" name="conditions" id="conditions"/>
+                       Соглашаюсь с рассылкой и принимаю <a class="treaty" href="">Условия договора</a>   
+                    </label>
+                  </div>                
+                  <button class="button-modal" type="submit">Отправить</button>                           
                 </form>
               </div>              
             </div>
