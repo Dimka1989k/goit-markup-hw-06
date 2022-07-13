@@ -404,10 +404,7 @@ textarea {
 
 
 
-.label-checkbox {
-    justify-content: space-between;
-    align-items: baseline;
-}    
+  
 
 .form-title {      
     font-family: 'Roboto', sans-serif;
@@ -437,6 +434,8 @@ textarea {
     letter-spacing: 0.01em;    
     color: #757575;
     margin-bottom: 4px;
+    
+    
 }
 
 
@@ -449,13 +448,17 @@ textarea {
     margin-bottom: 10px;    
     cursor: pointer;
     padding-left: 42px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    
+    
 }
 
 .form-input:focus-within,
 .form-input:hover,
 .form-input:focus {
-    border: 1px solid #2196F3;    
+    border: 1px solid #2196F3;
+    color: #2196F3;    
     fill: #2196F3;
     
 
@@ -471,6 +474,7 @@ textarea {
     width: 18px;
     height: 18px;
     transform: translateY(-25%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     
 }
@@ -560,18 +564,74 @@ textarea {
 
 
 
-.label-checkbox {    
+.label-checkbox {  
+    position: relative;  
+    align-items: center;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 24px;      
+    line-height: 1.7;      
     letter-spacing: 0.03em;    
     color: #757575;
+    padding-left: 24px;
+    
+    
 
 
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+}
+
+
+.icon-check {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+
+.checkbox:checked ~ .icon-check {
+    opacity: 0;
+}
+
+
+
+.icon-active {    
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    opacity: 0;
+    fill: #2196F3;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.checkbox:checked~.icon-active {
+    opacity: 1;
+}
 
 
 
